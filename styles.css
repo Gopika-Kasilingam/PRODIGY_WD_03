@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+    background-color: #292929; /* Dark gray background */
+    color: #ffffff; /* White text */
+}
+
+.container {
+    padding: 20px;
+    width: 700px;
+    text-align: center;
+    border: 1px solid #333333; /* Dark gray border */
+    border-radius: 10px;
+    background-color: #1a1a1a; /* Dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    color: #ffffff; /* White text */
+}
+
+.player-names {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.player-names input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #555555; /* Dark gray border */
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* White text */
+    background-color: #333333; /* Dark gray background for input */
+}
+
+.game-and-score {
+    display: none; /* Initially hidden */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #333333; /* Dark gray */
+    border-radius: 5px;
+    border: 1px solid #555555; /* Dark gray border */
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cell:hover {
+    background-color: #444444; /* Slightly lighter gray on hover */
+}
+
+.cell.winning-cell {
+    background-color: #ffd700; /* Gold for winning cells */
+    color: #333333; /* Dark gray text */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4a90e2; /* Blue */
+    color: #ffffff; /* White text */
+    border: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #357ab8; /* Darker blue on hover */
+}
+
+.turn,
+.result {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+.scoreboard {
+    background-color: #1a1a1a; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.scoreboard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+.scoreboard div {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffffff; /* White text */
+}
